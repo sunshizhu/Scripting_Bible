@@ -1,0 +1,14 @@
+#!/bin/bash
+#write a multi function script detected by name
+name=`basename $0`
+if [ $name = "addem" ]
+then 
+  total=$[ $1 + $2 ]  
+  echo "sum of $1 and $2 equals to $total"
+elif [ $name = "multem" ]
+then
+  result=$[ $1 * $2 ]
+  echo "multi of $1 and $2 equals $result."
+else
+  echo "command no matching."
+fi

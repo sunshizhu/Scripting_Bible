@@ -1,0 +1,18 @@
+#!/bin/bash
+# check if a file 
+if [ -e $HOME ]
+then 
+  echo "The home directory exists, is it a file?"
+  if [ -f $HOME ]
+  then
+    echo "This is a file."
+  else
+    echo "No this is not a file."
+    if [ -f $HOME/.bash_history ]
+    then
+      echo " bash history file is a file."
+    fi
+  fi
+else
+  echo "Sorry this object does not exist."
+fi
