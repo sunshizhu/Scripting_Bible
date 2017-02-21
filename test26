@@ -1,0 +1,4 @@
+#!/bin/bash
+# different cases
+
+read -n1 -p "Do you want to continue [Y/N]?" answer
