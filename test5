@@ -1,5 +1,7 @@
 #!/bin/bash
-# use the backtick character
+# testing the at command
 
-today=`date +%y%m%d`
-ls /usr/bin -al > log.$today
+time=`date +%T`
+echo "This script ran at $time."
+echo "This is the end of the script." >&2
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+# test for function return value
+
+function func1 {
+  read -p "Enter a value: " value
+  echo "the value read in is $value"
+  echo $[ $value * 2 ] 
+
+}
+
+result=`func1`
+echo "the new value output is $result"
+
+

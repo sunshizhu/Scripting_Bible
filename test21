@@ -1,0 +1,13 @@
+#!/bin/bash
+# using a function in a script
+
+function fun1 {
+  echo "this is an example of a function"
+}
+
+count=1
+while [ $count -lt 5 ]
+do
+  fun1
+  count=$[ $count + 1 ]
+done

@@ -1,0 +1,23 @@
+#!/bin/bash
+# testing array to function and return array from function
+
+function addarray {
+  local newarray
+  local sum=0
+  local element=$[ $# - 1 ]
+  newarray=(`echo "$@"`)
+  #oldarray=(`echo "$@"`)
+  local i
+  for (( i = 0; i <= $element; i++))
+  do 
+  newarray[$i]=$[ ${newarray[$i]} * 2 ]
+  done
+  echo ${newarray[*]}
+}
+
+
+myarray=(1 2 3 4 5)
+echo "the original array is ${myarray[*]}."
+arg1=`echo ${myarray[*]}`
+result=`addarray $arg1`
+echo "the result is $result."
