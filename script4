@@ -1,0 +1,19 @@
+BEGIN {
+print "The latest list of users and shells."
+print " USERID        Shell"
+print "--------      -------"
+FS=":"
+}
+
+{
+print $1 "       " $7
+
+}
+
+END {
+print "This concludes the listing"
+
+}
+
+
+# run: gawk -f script4 /etc/passwd
